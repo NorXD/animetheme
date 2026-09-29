@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="125" y1="92" x2="1390" y2="1053" gradientUnits="userSpaceOnUse"><stop stop-color="#111423"/><stop offset=".48" stop-color="#382546"/><stop offset="1" stop-color="#10151F"/></linearGradient>
+    <radialGradient id="planet" cx="0" cy="0" r="1" gradientTransform="matrix(519 160 -136 442 1080 252)" gradientUnits="userSpaceOnUse"><stop stop-color="#EBA883"/><stop offset=".36" stop-color="#A65767"/><stop offset=".72" stop-color="#54365F"/><stop offset="1" stop-color="#342744"/></radialGradient>
+    <radialGradient id="haze" cx="0" cy="0" r="1" gradientTransform="matrix(562 445 -393 497 908 649)" gradientUnits="userSpaceOnUse"><stop stop-color="#EF9277" stop-opacity=".63"/><stop offset="1" stop-color="#7B63C8" stop-opacity="0"/></radialGradient>
+    <linearGradient id="arch" x1="858" y1="222" x2="900" y2="897" gradientUnits="userSpaceOnUse"><stop stop-color="#E8B99D" stop-opacity=".87"/><stop offset=".55" stop-color="#AA718E" stop-opacity=".56"/><stop offset="1" stop-color="#38263F" stop-opacity=".05"/></linearGradient>
+    <linearGradient id="ground" x1="774" y1="650" x2="803" y2="1057" gradientUnits="userSpaceOnUse"><stop stop-color="#29243A"/><stop offset="1" stop-color="#0D1219"/></linearGradient>
+    <linearGradient id="beam" x1="1240" y1="477" x2="1023" y2="1030" gradientUnits="userSpaceOnUse"><stop stop-color="#D8FF91" stop-opacity=".64"/><stop offset="1" stop-color="#D8FF91" stop-opacity="0"/></linearGradient>
+    <filter id="blur" x="180" y="153" width="1280" height="965" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="54"/></filter>
+    <pattern id="stars" width="117" height="101" patternUnits="userSpaceOnUse"><circle cx="11" cy="19" r="1.2" fill="#F4E8DD" fill-opacity=".62"/><circle cx="87" cy="38" r=".8" fill="#D8FF91" fill-opacity=".75"/><circle cx="58" cy="88" r=".7" fill="#F4E8DD" fill-opacity=".5"/></pattern>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1600v1100H0z"/>
+  <path fill="url(#stars)" d="M0 0h1600v1100H0z"/>
+  <circle cx="1024" cy="414" r="378" fill="url(#planet)"/>
+  <circle cx="1024" cy="414" r="390" stroke="#E3B9B4" stroke-opacity=".26"/>
+  <g filter="url(#blur)" opacity=".8"><ellipse cx="817" cy="691" fill="url(#haze)" rx="518" ry="318"/></g>
+  <path d="M0 781 172 721l126 55 157-102 166 105 165-57 164 84 179-92 171 74 300-85v397H0V781Z" fill="#161927" fill-opacity=".72"/>
+  <path d="M0 871 177 814l190 68 191-100 144 62 187-81 171 78 145-47 160 74 235-66v298H0V871Z" fill="url(#ground)"/>
+  <path d="M813 953c-4-173 1-335 22-485 13-94 34-176 72-257 42 77 64 164 79 259 24 154 35 316 38 483H813Z" fill="url(#arch)" fill-opacity=".72"/>
+  <path d="M890 946c-5-184 5-396 17-559 13 162 25 377 29 559H890Z" fill="#191b29" fill-opacity=".7"/>
+  <path d="m0 1100 465-199 239 72 317-162 287 111 292-120v298H0Z" fill="#0B1017"/>
+  <path d="m649 1100 312-282 147 56 116-100 376 191v135H649Z" fill="#11151E"/>
+  <path d="M1085 627c-42 84-77 177-108 280" stroke="url(#beam)" stroke-width="2"/>
+  <path d="M343 884c261-153 592-200 986-140" stroke="#B8A0E8" stroke-opacity=".28"/>
+  <path d="M173 1002c373-152 860-154 1257-40" stroke="#B8A0E8" stroke-opacity=".18"/>
+  <circle cx="701" cy="245" r="2" fill="#D8FF91"/><circle cx="1272" cy="162" r="2" fill="#F4E8DD"/><circle cx="1379" cy="552" r="1.5" fill="#D8FF91"/><circle cx="529" cy="536" r="1.5" fill="#F4E8DD"/>
+</svg>

@@ -8,6 +8,7 @@ const gameCards = Array.from(document.querySelectorAll("[data-game-card]"));
 const countLabel = document.querySelector("#results-count");
 const emptyState = document.querySelector("#empty-state");
 const yearLabel = document.querySelector("#year");
+const heroArtLayer = document.querySelector(".hero-feature__art-layer");
 const state = { platform: "all", genre: "all", query: "" };
 
 function closeMenu() {
@@ -89,7 +90,29 @@ document.querySelectorAll("[data-genre-filter]").forEach(function (button) {
 
 yearLabel.textContent = String(new Date().getFullYear());
 
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (heroArtLayer && !prefersReducedMotion) {
+  let parallaxFrame = 0;
+  const updateParallax = function () {
+    const bounds = heroArtLayer.parentElement.getBoundingClientRect();
+    if (bounds.bottom >= 0 && bounds.top <= window.innerHeight) {
+      const progress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
+      const offset = (Math.min(1, Math.max(0, progress)) - 0.5) * 24;
+      heroArtLayer.style.setProperty("--parallax-y", offset.toFixed(1) + "px");
+    }
+    parallaxFrame = 0;
+  };
+  const scheduleParallax = function () {
+    if (!parallaxFrame) parallaxFrame = window.requestAnimationFrame(updateParallax);
+  };
+
+  window.addEventListener("scroll", scheduleParallax, { passive: true });
+  window.addEventListener("resize", scheduleParallax, { passive: true });
+  updateParallax();
+}
+
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
   const revealObserver = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

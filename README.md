@@ -10,6 +10,7 @@ Deschide `index.html` într-un browser modern. Site-ul nu are pachete de instala
 
 - Căutarea compară titlul, genul și platforma și ignoră diferențele de diacritice.
 - Filtrele de platformă și gen se combină cu căutarea.
+- Mișcarea de profunzime, intrarea titlului, luciul subtil și tranzițiile la carduri dau paginii un ritm cinematic, fără biblioteci de animație.
 - Meniul pentru mobil, legăturile interne și animațiile respectă navigarea de la tastatură și preferința de mișcare redusă.
 - Catalogul, scorurile și textele recenziilor sunt conținut editorial demonstrativ. Calendarul lansărilor folosește linkuri către paginile oficiale și trebuie verificat periodic.
 - Știrile nu sunt conectate încă la RSS sau API. Pentru conținut live se poate adăuga ulterior o sursă de date cu cache.
